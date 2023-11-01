@@ -25,6 +25,6 @@ jobs:
         with:
           resourceGroupName: Tej_RG
           dataFactoryName: prodadfbytej
-          armTemplateFile: ${{github.workspace}}/devadfbytej/ARMTemplateForFactory.json
-          armTemplateParametersFile: ${{github.workspace}}/devadfbytej/ARMTemplateParametersForFactory.json
+          armTemplateFile: devadfbytej/ARMTemplateForFactory.json
+          armTemplateParametersFile: devadfbytej/ARMTemplateParametersForFactory.json
           additionalParameters: 'factoryName=prodadfbytej'
