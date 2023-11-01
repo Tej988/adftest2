@@ -20,7 +20,10 @@ jobs:
           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
 
       - name: List files in the current directory
-        run: ls
+        run: |
+          ls
+           shell: /bin/bash
+
 
       - name: data-factory-deploy
         uses: Azure/data-factory-deploy-action@v1.2.0
