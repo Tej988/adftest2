@@ -1,0 +1,9 @@
+{
+	"name": "devadfbytej",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a9134f83-43f6-42b2-b686-71a19d7ca371",
+		"tenantId": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
+	}
+}
