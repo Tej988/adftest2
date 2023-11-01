@@ -19,12 +19,14 @@ jobs:
         with:
           creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
 
+      - name: List files in the current directory
+        run: ls
 
       - name: data-factory-deploy
         uses: Azure/data-factory-deploy-action@v1.2.0
         with:
           resourceGroupName: Tej_RG
           dataFactoryName: prodadfbytej
-          armTemplateFile: devadfbytej/ARMTemplateForFactory.json
-          armTemplateParametersFile: devadfbytej/ARMTemplateParametersForFactory.json
+          armTemplateFile: ${{github.workspace}}/devadfbytej/ARMTemplateForFactory.json
+          armTemplateParametersFile: ${{github.workspace}}/devadfbytej/ARMTemplateParametersForFactory.json
           additionalParameters: 'factoryName=prodadfbytej'
